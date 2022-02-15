@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// '/' ▶ URLの名前
+// Route ファザード（Laravelに元々入ってる機能）
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/sample', function () {
+//     return view('sample');
+// });
+
+// Route::get('URL', 'コントローラー@コントローラーのメソッド')->name('URLの名前');
+Route::get('/sample', 'SampleController@index')->name('sample.index');
